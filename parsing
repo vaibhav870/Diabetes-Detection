@@ -1,0 +1,9 @@
+msg.payload=msg.payload.predictions[0].values[0][1][0];
+if(msg.payload >0.5){
+    msg.payload="Higher Chances of Dibetic"
+}
+else
+{
+     msg.payload="Lower Chances of Dibetic"
+}
+return msg;
