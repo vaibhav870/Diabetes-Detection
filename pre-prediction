@@ -1,0 +1,12 @@
+var Pregnancies = global.get("Pregnancies")
+var Glucose = global.get("Glucose")
+var BloodPressure = global.get("BloodPressure")
+var SkinThickness = global.get("SkinThickness")
+var Insulin = global.get("Insulin")
+var BMI = global.get("BMI")
+var DPFunction = global.get("DPFunction")
+var Age = global.get("Age")
+var token=msg.payload.access_token
+msg.headers={'Content-Type': 'application/json',"Authorization":"Bearer "+token,"Accept":"application/json"}
+msg.payload={"input_data":[{"fields":[["Pregnancies","Glucose","BloodPressure", "SkinThickness","Insulin","BMI","DPFunction","Age"]],"values": [[Pregnancies,Glucose,BloodPressure, SkinThickness,Insulin,BMI,DPFunction,Age]]}]}
+return msg;
