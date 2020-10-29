@@ -1,0 +1,13 @@
+global.set("rd",msg.payload.Pregnancies)
+global.set("ad",msg.payload.Glucose)
+global.set("ms",msg.payload.BloodPressure)
+global.set("st",msg.payload.SkinThickness)
+global.set("st",msg.payload.Insulin)
+global.set("st",msg.payload.BMI)
+global.set("st",msg.payload.DPFunction)
+global.set("st",msg.payload.Age)
+
+var apikey="WCuB1HFcH8spW3xpG-jBHDfCuivhMCeRJ4BvbNcFxP65";
+msg.headers={"content-type":"application/x-www-form-urlencoded"}
+msg.payload={"grant_type":"urn:ibm:params:oauth:grant-type:apikey","apikey":apikey}
+return msg;
